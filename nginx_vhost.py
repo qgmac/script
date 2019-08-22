@@ -41,7 +41,7 @@ def main(argv):
    (status, output) = commands.getstatusoutput(command_1)
    if status == 0:
        commands.getstatusoutput(command_2)
-       print "配置成功"
+       print "配置成功\r\n网站目录："+webroot+server_name
        sys.exit(0)
    else:
        print "配置错误"+output
