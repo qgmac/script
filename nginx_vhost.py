@@ -31,7 +31,7 @@ def main(argv):
    if content.find(server_name) != -1:
        print "域名已经存在"
        sys.exit(2)
-   handle = open('/root/nginx.conf','a')
+   handle = open(conf_path,'a')
    handle.write(nginx_conf)
    handle.close()
    isExists=os.path.exists(webroot+server_name)
