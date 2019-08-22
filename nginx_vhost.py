@@ -6,7 +6,7 @@ def main(argv):
    sure = raw_input('输入域名'+server_name+'确定请输入 y:\r\n')
    if sure != 'y' and sure != 'Y':
         sys.exit(2)
-   conf_path = '/root/nginx.conf'
+   conf_path = '/usr/local/openresty/nginx/conf/nginx_vhosts.conf'
    conf_path_bk = conf_path+'.bk'
    command_1 = '/usr/local/openresty/nginx/sbin/nginx -t'
    command_2 = '/usr/local/openresty/nginx/sbin/nginx -s reload'
