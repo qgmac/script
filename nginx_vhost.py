@@ -8,12 +8,12 @@ def main(argv):
         sys.exit(2)
    conf_path = '/root/nginx.conf'
    conf_path_bk = conf_path+'.bk'
-   command_1 = '/usr/sbin/nginx -t'
-   command_2 = '/usr/sbin/nginx -s reload'
-   wwwuser = 'qgmac1'
+   command_1 = '/usr/local/openresty/nginx/sbin/nginx -t'
+   command_2 = '/usr/local/openresty/nginx/sbin/nginx -s reload'
+   wwwuser = 'www'
    webroot = '/data/web/'
    nginx_conf = '''
-   
+
    server
    {{
      listen       {port};
