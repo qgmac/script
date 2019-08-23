@@ -38,6 +38,7 @@ def main(argv):
    if not isExists:
        os.makedirs(webroot+server_name)
        commands.getstatusoutput('chown '+wwwuser+':'+wwwuser+' '+webroot+server_name)
+       commands.getstatusoutput('chmod g+w '+webroot+server_name)
    (status, output) = commands.getstatusoutput(command_1)
    if status == 0:
        commands.getstatusoutput(command_2)
